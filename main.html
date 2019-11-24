@@ -1,0 +1,896 @@
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="main.css" media="screen" type="text/css" />
+  <script>
+    $(window).scroll(startCounter);
+    function startCounter() {
+      if ($(window).scrollTop() > 200) {
+        $(window).off("scroll", startCounter);
+        $('.Count').each(function () {
+          var $this = $(this);
+          jQuery({ Counter: 0 }).animate({ Counter: $this.text() }, {
+            duration: 1000,
+            easing: 'swing',
+            step: function () {
+              $this.text(Math.ceil(this.Counter));
+            }
+          });
+        });
+      }
+    }
+
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <button id="bouton-connexion" class="btn btn-info">Connexion</button>
+    <nav class="navbar navbar-expand-sm navbar-light bg-white fixed-top">
+      <a class="navbar-brand" href="#">
+        <img src="https://business-angels.info/images/badge/logo.png" alt="Logo" style="width:300px">
+      </a>
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link " href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Qui sommes-nous ?
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Qui sommes nous</a>
+            <a class="dropdown-item" href="#">Entreprises financées</a>
+            <a class="dropdown-item" href="#">Ecosystème & partenaires</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Entrepreneurs déposez votre projet
+          </a>
+
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link " href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Être Business Angel
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Les Business Angels </a>
+            <a class="dropdown-item" href="#">Devenir Business Angels </a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link " href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Actualités
+          </a>
+
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container-fluid" style="margin: 0px;">
+
+    <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
+      <!--Indicators-->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-2" data-slide-to="1"></li>
+        <li data-target="#carousel-example-2" data-slide-to="2"></li>
+      </ol>
+      <!--/.Indicators-->
+      <!--Slides-->
+      <div class="carousel-inner" style="height:50%" role="listbox">
+        <div class="carousel-item active">
+          <div class="view">
+            <img class="d-block w-100" src="slider1.jpeg" alt="First slide">
+            <!-- <div class="card" style="width: 18rem;background-color:red;">
+                
+              
+              <div class="card-body">
+                <h5 class="card-title" >Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+              </div> -->
+            <div class="mask rgba-black-light"></div>
+          </div>
+
+        </div>
+        <div class="carousel-item">
+          <!--Mask color-->
+          <div class="view">
+            <img class="d-block w-100" src="https://business-angels.info/images/badge/Business-Angel.jpeg"
+              alt="Second slide">
+            <!-- <div class="mask rgba-black-strong"></div> -->
+          </div>
+          <div class="carousel-caption">
+            <h3 class="h3-responsive">Strong mask</h3>
+            <p>Secondary text</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <!--Mask color-->
+          <div class="view">
+            <img class="d-block w-100" src="https://business-angels.info/images/badge/porteur-projet.jpeg"
+              alt="Third slide">
+            <div class="mask rgba-black-slight">yyyy</div>
+          </div>
+          <div class="carousel-caption">
+            <h3 class="h3-responsive">Slight mask</h3>
+            <p>Third text</p>
+          </div>
+        </div>
+      </div>
+      <!--/.Slides-->
+      <!--Controls-->
+      <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+      <!--/.Controls-->
+    </div>
+  </div>
+
+  <div class="container" style="padding-top: 3rem;">
+    <div class="row">
+      <h2 class="heading1" style="color: #2a2b6a;text-align: center;">La force du réseau</h2>
+      <p style="color: #2a2b6a;text-align: center;">
+        Créée en 2004, l’association « Les Business Angels des Grandes Écoles » (BADGE) est l’un des 1ers réseaux de
+        Business Angels en France. Nos adhérents sont, pour beaucoup, issus d'écoles d'ingénieurs ou de management, mais
+        nombre d'autres compétences et expériences sont représentées.
+      </p>
+    </div>
+    <div class="row">
+      <div class="col-sm-4 p-2">
+        <img class="img-responsive"
+          src="https://img.mailinblue.com/1004036/images/rnb/original/5d7614cd1b776a97f8386669.jpg" width="350px">
+      </div>
+      <div class="col-sm-3 p-2">
+        <p style="padding-bottom: 1rem;">Notre objectif est de soutenir la création, le développement et le financement
+          d’entreprises innovantes dans des domaines technologiques et de services, à fort potentiel de croissance.</p>
+        <p>Forts de leurs expériences professionnelles reconnues, nos adhérents accompagnent et financent une trentaine
+          de projets par an.</p>
+      </div>
+      <div class="col-sm-4">
+        <img class="img-responsive"
+          src="https://img.mailinblue.com/1004036/images/rnb/original/5d7614cd1b776a98c70e8618.jpg" width="350px">
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="container-fluid mid ">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 division">
+          <img src="https://business-angels.info/images/badge/icones/icone-loupe-carre.png">
+          <h4>Détection et sélection</h4>
+          <p>De projets innovants</p>
+        </div>
+        <div class="col-sm-4 division">
+          <img src="https://business-angels.info/images/badge/icones/icone-mise-en-relation-carre.png">
+          <h4>Mise en relation et rencontres</h4>
+          <p>Entrepreneurs / Business Angels </p>
+        </div>
+        <div class="col-sm-4 division">
+          <img src="https://business-angels.info/images/badge/icones/icone-business-carre.png">
+          <h4>Soutien et formation</h4>
+          <p>Aux business angels
+
+          </p>
+        </div>
+        <div class="col-sm-4 division">
+          <img src="https://business-angels.info/images/badge/icones/icone-echanges-carre.png">
+          <h4>Partage d'expériences
+          </h4>
+          <p>Entre investisseurs
+
+          </p>
+        </div>
+        <div class="col-sm-4 division">
+          <img src="https://business-angels.info/images/badge/icones/icone-promotion-carre.png">
+          <h4>Promotion et accompagnement
+          </h4>
+          <p>Des jeunes entreprises
+
+          </p>
+        </div>
+        <div class="col-sm-4 division">
+          <img src="https://business-angels.info/images/badge/icones/icone-fusee-carre.png">
+          <h4>Investissement direct ou SIBA
+          </h4>
+          <p>(Société d’Investissement de Business Angels)
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid mb-4" style="background-color: #f8f9fa;margin:0px;">
+    <div class="container pt-5 pb-4" style="text-align: center;">
+      <div class="row">
+        <div class="col-sm-3">
+          <h2 class="Count">2500</h2>
+          <h5>Projets étudiés </h5>
+        </div>
+        <div class="col-sm-3">
+          <h2 class="Count">500</h2>
+          <h5>Projets retenus</h5>
+        </div>
+        <div class="col-sm-3">
+          <h2 class="Count">160</h2>
+          <h5>Projets financés</h5>
+        </div>
+        <div class="col-sm-3">
+          <h2 class="Count" style="display:inline;">30200</h2>
+          <h2 style="display:inline;">k€</h2>
+          <h5>
+            Montant investi
+          </h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-3 blocks m-2">
+          <img src="https://business-angels.info/images/badge/logos/logo-cardiaware-blanc.png">
+          <p class="mt-2">Dispositif médical non invasif pour traiter les pathologies valvulaires cardiaques.</p>
+        </div>
+        <div class="col-sm-3 blocks m-2">
+          <img src="https://business-angels.info/images/badge/logos/logo-oncodiag-blanc.png">
+          <p class="mt-2"> Diagnostic précoce et surveillance des cancers de la vessie et du colon par des méthodes non
+            invasives.</p>
+        </div>
+        <div class="col-sm-3 blocks m-2">
+          <img src="https://business-angels.info/images/badge/logos/logo-kannelle-blanc.png">
+          <p class="mt-2">Solution permettant aux entreprises d’être autonomes sur la réalisation de contenus vidéo.</p>
+        </div>
+        <div class="col-sm-1"></div>
+      </div>
+    </div>
+
+
+    <div class="container p-4">
+      <div class="row m-4">
+        <a class="btn btn-outline-info btn-block" href="/index.php/about/entreprises-financees">Voir toutes les
+          entreprises financées</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="margin-top: 10%;margin-bottom: 10%; padding-bottom: 0px;">
+    <div class="row">
+      <h2>Dernière newsletter</h2>
+    </div>
+    <div class="row" style="background-color: #f8f9fa;">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6 mx-0 px-0  pb-0 mb-0" style="background-color: white;text-align: center;">
+        <a class="navbar-brand my-2" href="#">
+          <img src="https://business-angels.info/images/badge/logo.png" alt="Logo"
+            style="width:400px;padding-bottom: 1rem;">
+        </a>
+        <p style="background-color:darkblue;color: white;padding: 0.5rem 0;margin:0;">Lettre d'information Externe
+          Novembre 2019 - N°110</p>
+        <div class="container-fluid" style="margin:0px;text-align: left;">
+          <div class="row">
+            <div class="col-sm-4 m-3">
+              <img src="https://img.mailinblue.com/1004036/images/rnb/original/5d1cb5918c2f4675e44b85a4.jpg">
+            </div>
+            <div class="col-sm-7 pt-3">
+              <h4 style="color: darkblue;">ÉDITO</h4>
+              <p style="font-weight: bold;">
+                Merci à toutes les associations d’alumni qui font confiance aux talents de BAdGE !</p>
+              <p>
+                Les associations d’alumni d’écoles d’ingénieurs et de commerce contribuent largement au succès de nos
+                projets d’accompagnement, en nous offrant des ressources à deux niveaux :
+              </p>
+            </div>
+          </div>
+          <div class="row m-2">
+            <ul>
+              <li>
+                D’une part grâce à la diversité des compétences de leurs membres nous ayant rejoint.
+              </li>
+              <li>
+                D’autre part parce que chaque école enseigne l’Entreprenariat et nourrit la création de start-ups à
+                travers un incubateur ou un accélérateur, représentant ainsi un vivier de projets de qualité.
+              </li>
+            </ul>
+            <p>En contrepartie, BAdGE offre aux membres des alumni deux axes d’opportunités :</p>
+            <ul>
+              <li>
+                Devenir membre de notre réseau dont la mission est d’accompagner le développement des jeunes sociétés
+                innovantes qui feront l’économie et les services de demain,
+              </li>
+              <li>
+                Pour les alumni porteurs de projets recherchant un financement et un accompagnement, BAdGE peut répondre
+                à leur besoin.
+              </li>
+            </ul>
+            <p>
+              A titre d’exemple, ce mois-ci, Nicolas Viard, fortement impliqué dans l’Entreprenariat des anciens de
+              l’Agro nous révèle comment il inclut l’exemple et l’actualité de Badge dans son programme
+              d’accompagnement.
+            </p>
+            <p>
+              Nos accords de partenariat avec les associations d’Alumni sont donc précieux pour le développement de
+              BAdGE, et nous tenons à ce que ces partenariats soient gagnant-gagnant de part et d‘autre : nous sommes
+              ainsi très reconnaissants vis-à-vis de nos partenaires ayant le plus contribué à nourrir notre équipe et à
+              nous présenter des projets d’avenir.
+            </p>
+            <p>
+              De même, nous restons à l’écoute de toute suggestion qui pourrait faciliter la promotion de nos actions
+              auprès des associations d’alumni et motiver de nouveaux membres à nous rejoindre !
+            </p>
+
+            <p>
+              Amicalement,<br><a href="#" class="anchor">Jacques Tamisier
+              </a><br>Président des Business Angels des Grandes Écoles
+            </p>
+            <img src="http://img.mailinblue.com/1004036/images/rnb/original/5d1cb7538c2f467b3a75319b.jpg"
+              style="width: -webkit-fill-available;">
+          </div>
+
+          <div class="row">
+            <div class="col-sm-4 m-3">
+              <img src="https://img.mailinblue.com/1004036/images/rnb/original/5dc01ce92839a31eea22eef0.jpg">
+            </div>
+            <div class="col-sm-7 pt-3">
+              <h4 style="color: darkblue;">INTERVIEW</h4>
+              <p><a href="#" class="anchor">Nicolas Viard</a>, correspondant
+                école BADGE</p>
+              <p style="font-weight: bold;">
+                Bonjour Nicolas, l’association BAdGE a beaucoup apprécié ta mise en relation entre notre réseau de
+                business angels et les alumni Agro d’AgroParistech et d’UniAgro et nous aimerions mieux comprendre le
+                contexte dans lequel tu as entrepris cette démarche.</p>
+            </div>
+
+          </div>
+
+          <div class="row m-2">
+            <p style="font-weight: bold;">Dans un premier temps, peux-tu me préciser ton rôle auprès des Agros
+              entrepreneurs ?</p>
+            <p>Dans un premier temps, peux-tu me préciser ton rôle auprès des Agros entrepreneurs ?
+              Dans mes activités professionnelles au sein d’Agro’Innov, j’accompagne le développement de startups et
+              de projets des filières du vivant, en les aidant dans leur stratégie de communication, en élargissant
+              leur réseau et en les mettant en relation avec des sources de financement adaptées à leurs besoins.
+            </p>
+            <p>
+              Naturellement j’ai élargi ma contribution au réseau des alumni Agros à travers l’organisation de
+              différents événements associant diplômés et étudiants. Ce fut le cas notamment de l’université d’été
+              du Forum Vitae de septembre dernier dont l’objectif était de créer un événement médiatique offrant aux
+              entreprises d’une part, de la visibilité, et aux élèves d’autre part, des sources d’inspiration pour
+              s’approprier leurs sujets de l’année.
+            </p>
+            <p>
+              On a abordé le parcours du start-uppeur à travers 3 tableaux : enjeux humains, enjeux de marché, et
+              financements. Sur ce volet du financement, cela m’a semblé logique de faire connaître le réseau BAdGE
+              aux alumni, déjà entrepreneurs ou non. Pour BAdGE l’objectif était de convaincre les entrepreneurs et
+              les alumni potentiels investisseurs ! Les vidéos de la soirée sont sur la chaine <a href="#"
+                style="color:darkcyan;text-decoration-line: underline;">YouTube AgroParisTech Alumni
+              </a>
+            </p>
+            <p style="font-weight: bold;">Pourquoi t’être intéressé à BAdGE en matière de financement pour les
+              alumni d’AgroParistech ?</p>
+            <p>Tout d’abord, le groupe Agro Business Angels existait avant que je ne m’en occupe, mais il était en
+              veille depuis quelques années. J’ai pour ambition de relancer l’intérêt des alumni Agros pour
+              l’investissement ou le financement de projets par BAdGE</p>
+            <p>Le réseau Agro Business Angels regroupe près de 300 Agros qui sont intéressés à la fois par la
+              newsletter de BAdGE et par les thèmes de ses soirées. Après, en fonction de leur implication
+              personnelle vis-à-vis du sujet du financement, ils peuvent adhérer ou non aux différentes options de
+              l’association. Ils seront aussi les premiers à recommander BAdGE à leur propre réseau.</p>
+            <p style="font-weight: bold;">Comment sensibilises-tu les alumni Agro à l’intérêt que peut représenter
+              BAdGE ?
+            </p>
+            <p>
+              Tout d’abord je travaille à identifier les actions du réseau, ce qui me sert de support pour leur
+              démontrer que BAdGE peut être levier d’accélération de leur développement.
+              Lorsque des startuppers de l’Agro viennent me voir pour des sujets de financement de leur projet, je
+              les oriente sur le site de BAdGE, et les invite à consulter les newsletters ainsi que les thèmes des
+              soirées.
+            </p>
+            <p>
+              Pour les alumni, le fait d’intégrer Agro BAdGE, c’est vraiment une façon de se tenir au courant. La
+              majorité des membres d’Agro BAdGE provient des réseaux Agro Entrepreneurs et Agro Dirigeants, donc
+              surtout des personnes dans la quarantaine qui envisagent d’investir, mais aussi des personnes autour
+              de la trentaine, simplement ouvertes et curieuses ou potentiellement à la recherche de financements
+              pour leur propre structure innovante.
+            </p>
+            <p style="font-weight: bold;">Finalement, tu connectes BAdGE avec deux populations d’Agros : d’une part
+              des investisseurs et business angels potentiels, d’autre part des porteurs de projets qui pourraient
+              être financés par BAdGE. En repensant à ces deux cas de figure, quels conseils donnerais-tu à BAdGE au
+              vu de tes premières expériences avec l’association, pour optimiser ses chances de succès auprès des
+              membres alumni Agro ?</p>
+            <p>Les alumni Agro sont très sensibles aux messages véhiculés sur les réseaux sociaux : une présence de
+              BAdGE sur les réseaux sociaux, tant pour témoigner de la valeur des projets accompagnés que des
+              compétences apportées par les membres de BAdGE, permettrait de renforcer efficacement sa visibilité.
+            </p>
+          </div>
+
+
+          <div class="row p-4 " style="background-color:#24a2b7;text-align: center;color: white;">
+            <p style="font-size: 20px; font-weight: bolder;margin-bottom: 0px;padding-bottom: 0px;">PROCHAINS
+              RENDEZ-VOUS</p>
+            <p style="font-size: 20px;margin-top: 0px;padding-top: 0px;">- PRÉSENTATIONS DE PROJETS -</p>
+            <p>Réunions mensuelles avec présentation de projets innovants en recherche de fonds
+              >>> Adhérents inscrivez-vous >>> Non-adhérents, demandez votre invitation <<< Par Michel Huet, Secrétaire
+                Général, chargé de l'Instruction</p> </div> <div class="row p-4 "
+                style="background-color:rgb(36, 162, 183);color: white;">
+                <div class="col-sm-5">
+                  <img src="https://img.mailinblue.com/1004036/images/rnb/original/5d9c79fbaa1ce10aea75acd8.jpg"
+                    style="width:inherit">
+                </div>
+                <div class="col-sm-7 ">
+                  <h4>Mardi 19 Novembre 2019 à 17h30</h4>
+                  <p style="color:yellow">>>> Exceptionnellement cette réunion se tiendra :</p>
+                  <p style="font-weight: bold;">Maison des Ponts - Ponts Alumni<br>
+                    42, rue Boissière - 75116 Paris</p>
+                  <p>Réunion suivie d’un cocktail. Inscription obligatoire, se munir d’une pièce d’identité.</p>
+                  <button class="btn" style="background-color: white;color:#24a2b7">
+                    S'inscrire</button>
+                </div>
+          </div>
+
+          <div class="row p-4 " style="background-color:rgb(36, 162, 183);color: white;">
+            <div class="col-sm-5">
+              <img src="https://img.mailinblue.com/1004036/images/rnb/original/5dc020872839a329f716153c.jpg"
+                style="width:inherit">
+            </div>
+            <div class="col-sm-7 ">
+              <h4>Mardi 17 Décembre 2019 à 17h30 </h4>
+              <p style="font-weight: bold;">Le Centorial - Campus EDHEC Alumni de Paris
+                18, rue du Quatre-Septembre - 75002 Paris<br>
+              </p>
+              <p>Réunion en salle Tokyo suivie d’un cocktail. Inscription obligatoire, se munir d’une pièce d’identité.
+              </p>
+              <button class="btn" style="background-color: white;color:#24a2b7">
+                S'inscrire</button>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-6 p-2">
+              <img src="https://img.mailinblue.com/1004036/images/rnb/original/5d7614cd1b776a97f8386669.jpg"
+                style="width:inherit ">
+            </div>
+            <div class="col-sm-6 p-2">
+              <img src="https://img.mailinblue.com/1004036/images/rnb/original/5d7614cd1b776a98c70e8618.jpg"
+                style="width: inherit">
+              <em style="color:darkcyan;font-size: 12px;">Adhésion valable jusqu’à fin 2020</em>
+            </div>
+
+            <img src="http://img.mailinblue.com/1004036/images/rnb/original/5d1cb7538c2f467b3a75319b.jpg"
+              style="width: -webkit-fill-available;">
+
+          </div>
+
+          <div class="row">
+            <div class="col-sm-12 pt-3" style="text-align: left;">
+              <center>
+                <img src="https://img.mailinblue.com/1004036/images/rnb/original/5d763b45ac8d8f517a4a416f.png"></center>
+              <h5 class="py-3" style="color:darkblue;font-weight: bolder;text-align: center;">NOS ACTUALITÉS</h5>
+              <img src="https://img.mailinblue.com/1004036/images/rnb/original/5dc02247943d742bd50c8246.jpg"
+                style="width: inherit;">
+              <p class="py-3" style="color:darkblue;font-weight: bolder;text-align: center;">Bpifrance Inno Génération :
+                retour en 2 minutes sur le plus grand rassemblement business d’Europe</p>
+              <p>BAdGE était à nouveau présent sur la cinquième édition Bpifrance Inno Génération qui en une seule
+                journée a rassemblé 52.000 entrepreneurs et créateurs d’entreprise à l’Accor Arena Paris-Bercy.</p>
+              <img src="https://img.mailinblue.com/1004036/images/rnb/original/5dc023b6f2d685334724ad0c.jpg"
+                style="width: inherit;">
+              <p>Installé sur la Place des Rendez-vous, espace rencontres business dédié aux Business Angels, BAdGE a
+                accueilli 42 porteurs de projets en recherche de financement.</p>
+              <p>Jacques Tamisier, Président, et Paul Leondaridis, Délégué Général, remercient Paul Bruma, Vice
+                Président, et son équipe Sourcing renforcée pour l’occasion par les membres de BAdGE d’avoir accueilli
+                et renseigné ces entrepreneurs innovants sur la capacité de BAdGE à enregistrer, étudier, soutenir,
+                financer leurs projets. Merci à : Francine Caspari, Christian Delaroche, Gilles Drouard, Isabelle
+                Goudchaux, Jean-Pierre Lacroux, Philippe Pernot, Viviane Moreau,</p>
+              <p>La journée s’est clôturée par le discours du Président de la République, Emmanuel Macron, accueilli par
+                Nicolas Dufourcq, Directeur Général de Bpifrance<a href="#" class="anchor"> >>> retrouvez-les ici</a>
+              </p>
+              <p>
+                Ainsi que les nombreux autres intervenants et sujets abordés <a href="#" class="anchor"> >> voir ici</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="row p-4" style="color:white;background-color: rgb(36, 162, 183);">
+            <div class="row">
+              <div class="col-sm-12">
+                <h5 style="text-align: center;font-weight: bolder;" class="py-3">ÉVÉNEMENT </h5>
+                <img src="https://img.mailinblue.com/1004036/images/rnb/original/5dc0274a943d743def1a8359.jpg"
+                  style="width: inherit;">
+              </div>
+            </div>
+            <div class="row py-3">
+              <div class="col-sm-4 p-0">
+                <img src="https://img.mailinblue.com/1004036/images/rnb/original/5d9c8b279b97c24b425bb6b5.png"
+                  style="width:inherit">
+              </div>
+              <div class="col-sm-8" style="font-weight: bolder;">
+                <h5>Jeudi 28 Novembre 2019 à 18h00</h5>
+                <p>Espace Carpeaux<br>15 Bd Aristide Briand - 92400 Courbevoie</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12">
+                <p>
+                  Angels Santé, Arts et Métiers Business Angels, les Business Angels des Grandes Ecoles, Femmes Business
+                  Angels, Paris Business Angels et Val’Angels réunissent leurs investisseurs pour leur présenter trois
+                  opportunités de financement en phase de closing. 400 Business Angels sont attendus pour cette occasion
+                  spéciale.<br>
+                  L’objectif de cette plénière inter-réseaux est de réunir en une soirée les intentions d’investissement
+                  nécessaires au financement de ces trois startups.<br>
+                  La première édition de cet événement, organisée en mai 2018, a réuni plus de 200 investisseurs au
+                  théâtre de Neuilly-sur-Seine. Les montants investis à l’issue de la soirée représentaient plus de 80%
+                  des fonds recherchés par les startups, soit plus de 700 000€. Un beau succès !
+                </p>
+                <p style="font-size: 12px;">
+                  La participation à cette soirée est réservée aux Business Angels des réseaux participants.
+                  Venez nombreux et invitez vos amis intéressés / Entrée gratuite mais inscription obligatoire.
+                  <a style="text-decoration-line: underline;color:yellow">Informations complémentaires ici</a> et
+                  inscription ci-dessous avant le mardi 26 novembre
+                </p>
+                <center>
+                  <button class="btn" style="background-color: white;color:#24a2b7">
+                    S'inscrire</button></center>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="row py-3">
+            <div class="col-sm-12" style="text-align: center;">
+              <img src="https://img.mailinblue.com/1004036/images/rnb/original/5d763a2c1b776a4b46648d0b.png">
+              <h5 class="pt-3" style="font-weight: bolder;color:darkblue">
+                RÉSEAU & PARTENAIRES
+              </h5>
+            </div>
+
+          </div>
+
+          <div class="row mx-2 ">
+            <div class="col-sm-4">
+              <img src="https://img.mailinblue.com/1004036/images/rnb/original/5dc0338cf2d6856cc62fb6d2.jpg"
+                style="width:inherit">
+            </div>
+            <div class="col-sm-8">
+              <p style="color:darkblue;font-weight: bold;">Université d’automne France Angels
+              </p>
+              <p style="font-size:14px">
+                <span style="color:darkblue;font-weight: bold;">A Strasbourg les mercredi 13 et jeudi 14 novembre
+                  2019</span><br>
+                Les Universités France Angels sont l’occasion pour les réseaux de Business Angels, leurs membres, les
+                membres associés ainsi que les partenaires de se rencontrer, rencontrer les acteurs de l’écosystème,
+                échanger les bonnes pratiques et développer les liens entre les réseaux et les autres acteurs du
+                financement de proximité.
+              </p>
+              <button class="btn" style="background-color: darkblue;color:white">
+                S'inscrire</button>
+            </div>
+          </div>
+          <hr>
+
+          <div class="row mx-2 ">
+            <div class="col-sm-4">
+              <img src="https://img.mailinblue.com/1004036/images/rnb/original/5dc034b4c44e5270233c8615.jpg"
+                style="width:inherit">
+            </div>
+            <div class="col-sm-8">
+              <p style="color:darkblue;font-weight: bold;">SATT Paris-Saclay, déjà 5 ans d’existence !
+              </p>
+              <p style="font-size:14px">
+                <span style="color:darkblue;font-weight: bold;">19 novembre 2019 à 18h30 - HEC Jouy-en-Josas
+                </span><br>
+                Découvrez la SATT Paris-Saclay deeptech factory !
+              </p>
+              <button class="btn" style="background-color: darkblue;color:white">
+                S'inscrire</button>
+            </div>
+          </div>
+
+          <div class="row py-5">
+            <div class="col-sm-12" style="background-color: darkblue;color:white;text-align: center;">
+              <h5 class="py-4" style="font-weight: bolder;">LU DANS LA PRESSE</h5>
+              <p style="font-weight: bolder;text-align:left;">Point Fiscalité : 25% de réduction d'impôt, encore partie
+                remise !</p>
+              <p style="text-align: left;">Il semblerait que le taux de réduction de l’impôt sur le revenu des personnes
+                physiques ayant investi dans des startup innovantes demeure inchangé à 18% en 2019 malgré l'inscription
+                pour la 2ème année consécutive dans la Loi des Finances du taux de 25%.
+                A nouveau Bercy reporte sur Bruxelles ses propres manquements. Nous aurons droit au taux de 25% en 2020
+                c'est promis !<br>Pour Badge, une seule certitude : le moteur de l'investissement ne doit pas être
+                l'avantage fiscal mais la qualité du projet et de l'équipe qui le porte. </p>
+              <button class="btn" style="background-color: white;">En savoir +</button>
+              <img src="https://img.mailinblue.com/1004036/images/rnb/original/5d7635e5c25969452658c88e.png"
+                style="width:inherit;" class="my-3">
+              <img src="https://img.mailinblue.com/1004036/images/rnb/original/5dc5235829a69b01f52daa6c.png"
+                class="my-3">
+              <p style="text-align: left;">
+                Poitiers. La société Seekyo et l’équipe de recherche de Sébastien Papot ont breveté un anticancéreux.
+                Les résultats exaltent les espoirs de la médecine.
+              </p>
+              <button class="btn" style="background-color: white;">En savoir +</button>
+              <img src="https://img.mailinblue.com/1004036/images/rnb/original/5d7635e5c25969452658c88e.png"
+                style="width:inherit;" class="my-3">
+              <img src="https://img.mailinblue.com/1004036/images/rnb/original/5dc5271f8d243efb561a365b.png"
+                class="my-3">
+              <p style="text-align: left;">
+                Kinvent, la sportech qui muscle la rééducation fonctionnelle. Localisée à Montpellier, la jeune société
+                innovante a mis au point un outil de suivi, de planification et d'individualisation des entraînements,
+                dédié aux préparateurs physiques, entraîneurs et kinésithérapeutes. Pour accélérer sa R&D, Kinvent vient
+                de boucler un financement de 1 million d'euros.
+              </p>
+              <button class="btn mb-5" style="background-color: white;">En savoir +</button>
+
+
+
+            </div>
+          </div>
+
+
+          <div class="row my-3">
+            <div class="col-sm-12" style="text-align: center;">
+              <img src="https://img.mailinblue.com/1004036/images/rnb/original/5d764e85ac8d8f92f55447b5.png">
+              <h5 style="color:darkblue;font-weight: bolder;" class="py-4">NOS DERNIERS CLOSINGS</h5>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-5">
+              <img src="https://www.descartes.org/xmpba/documents/xmpba/projet/3546/3nkT1Fd3Dw7DxyXK.png"
+                style="width:inherit">
+            </div>
+            <div class="col-sm-7">
+              <p style="font-size: 14px;">
+                Le graphène est un matériau découvert en 2004, c'est le matériau le plus conducteur, le plus solide, le
+                plus imperméable et possède bien d'autres propriétés encore. Après 4 années de R&D, Graphene Production
+                a mis au point une méthode de production révolutionnaire de graphène, il est devenu le plus gros
+                producteur européen.
+                <a href="#" class="anchor">Graphene Production</a> a débuté une levée de fonds pour asseoir son statut
+                de plus gros producteur européen et accélérer son développement commercial. Le volet Equity vient d'être
+                finalisé. Les Business Angels des Grandes Ecoles sont fiers d'avoir participé pour moitié à cette
+                augmentation de capital, Arts et Métiers Business Angels, Angels Bay Invest, Femmes Business Angels et
+                des investisseurs Auvergne-Rhône-Alpes Angels complétant le tour de table.
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-5">
+              <img src="https://img.mailinblue.com/1004036/images/rnb/original/5d763ff6c259695c3535dbe9.jpg"
+                style="width:inherit">
+            </div>
+            <div class="col-sm-7">
+              <p style="font-size: 14px;">
+                Comme annoncé<a href="#" class="anchor"> dans notre dernière Lettre d’information, Vetbiobank</a>
+                premier laboratoire vétérinaire français à exploiter le pouvoir des cellules souches néonatales pour
+                traiter les maladies inflammatoires chroniques des animaux dont l'arthrose canine et équine, vient de
+                boucler une levée de fonds de 1.020 K€. BAdGE et ses adhérents ont contribué à cette levée.
+
+              </p>
+              <button class="btn btn-info">
+                Lire le communiqué</button>
+            </div>
+
+          </div>
+
+          <div class="row">
+            <div class="col-sm-12" style="text-align: center;">
+              <img src="http://img.mailinblue.com/1004036/images/rnb/original/5d1cb7538c2f467b3a75319b.jpg"
+                style="width: inherit;" class="my-4">
+              <img src="https://img.mailinblue.com/1004036/images/rnb/original/5d763b45ac8d8f517a4a416f.png">
+
+              <h5 style="font-weight: bold;color:darkblue" class="py-2">NOUVELLES DE NOS START-UP
+              </h5>
+
+              <img src="https://img.mailinblue.com/1004036/images/rnb/original/5dc02e5e943d7458242f9bc8.jpg"
+                class="py-3">
+              <p style="font-size: 12px;text-align: left;">
+                <b>Des solutions Otono-me connectées pour aider les personnes âgées à rester autonomes à la maison, en
+                  EPHAD ou en Résidence.</b> Ces solutions pour le bien vieillir sont basées sur une technologie
+                d’analyse de données et une algorithmie de pointe qui permet de détecter les mouvements anormaux de la
+                personne surveillée à partir de capteurs installés sur son lieu de vie.<br>
+                Telegrafik a levé 1m€ en janvier 2017 pour mettre sur le marché Otono-me domicile. A ce jour, Telegrafik
+                est sur le point de réaliser une 2ème augmentation de capital pour accélérer l'acquisition de clients
+                finaux et réussir le lancement de ses nouvelles offres.
+                Carole Zisa-Garat, Présidente de Télégrafik, invitée d’Europe1 présente l’offre de solutions connectées
+                aux personnes âgées vivant à domicile, en résidence Séniors ou en EHPAD.
+              </p>
+              <button class="btn mb-3" style="background-color: darkblue;color:white">Voir le replay
+              </button><br>
+              <img src="https://img.mailinblue.com/1004036/images/rnb/original/5dc522528d243eed383f0a21.jpg"
+                class="my-4">
+              <p style="text-align: left;">
+                BAdGE le plus gros réseau de BA à financer Cardiawave s’associe au succès de cette entreprise
+                prometteuse qui vient de réaliser une première mondiale en traitant de manière non-invasive avec des
+                ultrasons thérapeutiques des patients atteints de rétrécissement aortique calcifié .
+              </p>
+              <button class="btn mb-3" style="background-color: darkblue;color:white">Voir le replay
+              </button>
+
+
+            </div>
+          </div>
+
+
+          <div class="row ">
+            <div class="col-sm-12 p-0 m-0">
+              <img src="https://img.mailinblue.com/1004036/images/rnb/original/5d9d8ae8aa1ce161c328b3e0.jpg"
+                style="width:inherit">
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-6 py-4" style="background-color: darkblue;color: white;">
+              <p style="font-size: 12px;">
+                <b>Les Business Angels des Grandes Écoles</b><br>
+                Siège : 12 r. de Poitiers 75007 Paris<br>
+                Bureaux : 15 r. du Colonel Driant 75001 Paris<br>
+                Tel : 01 42 22 67 35</p>
+            </div>
+            <div class="col-sm-6 py-4" style="background-color:darkblue;text-align: right;">
+              <img src="http://img.mailinblue.com/new_images/rnb/theme1/rnb_ico_tw.png">
+              <img src="http://img.mailinblue.com/new_images/rnb/theme1/rnb_ico_in.png">
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-sm-12" style="background-color:rgb(253, 192, 47);">
+              <a style="color:white;text-decoration-line: underline;"> >>> Suivez l’actualité du réseau en vous abonnant
+                à cette Newsletter ICI <<< </a> </div> </div> <div class="row">
+                  <div class="col-sm-12 p-0 m-0">
+                    <p style="color:white;text-align: center;background-color: rgb(36, 162, 183);" class="p-3"> <b>>>>
+                        COMITÉ DE RÉDACTION</b><br>
+                      Jacques Tamisier, Président / Paul Leondaridis, Délégué Général / Véronique Dupont
+                      Adressez votre sujet à la rédaction:<a style="color:black" href="#">
+                        secretariat@business-angels.info</a>
+                      Se désabonner"<br>>>>> Pour mettre à jour vos informations ou vous désabonner de notre newsletter
+                      <<< </p> </div> </div> </div> <div class="col-sm-3">
+                  </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid m-0"
+          style="background-image: url('https://business-angels.info/images/badge/fond-accueil-partenaires.jpg');text-align: center;background-position: center;">
+          <div class="row py-5">
+            <div class="col-sm-12 ">
+              <h4 style="color:white">Ils nous font confiance</h4>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-1 m-2">
+              <img src="https://business-angels.info/images/badge/ecoles/Ecole-Agro.png" style="width: inherit;">
+            </div>
+
+            <div class="col-sm-1 m-2">
+              <img src="https://business-angels.info/images/badge/ecoles/Ecole-Audencia.png" style="width: inherit;">
+            </div>
+
+            <div class="col-sm-1 m-2">
+              <img src="https://business-angels.info/images/badge/ecoles/Ecole-Centrale-Supelec.png"
+                style="width: inherit;">
+            </div>
+
+            <div class="col-sm-1 m-2">
+              <img src="https://business-angels.info/images/badge/ecoles/chicagoboothangel.png" style="width: inherit;">
+            </div>
+
+            <div class="col-sm-1 m-2">
+              <img src="https://business-angels.info/images/badge/logos/logo-edhec-alumni-blanc.png"
+                style="width: inherit;">
+            </div>
+
+            <div class="col-sm-1 m-2">
+              <img src="https://business-angels.info/images/badge/ecoles/Ecole-EMLyon.png" style="width: inherit;">
+            </div>
+
+            <div class="col-sm-1 m-2">
+              <img src="https://business-angels.info/images/badge/ecoles/Ecole-ENS.png" style="width: inherit;">
+            </div>
+
+            <div class="col-sm-1 m-2">
+              <img src="https://business-angels.info/images/badge/ecoles/Ecole_ENSTA.png" style="width: inherit;">
+            </div>
+
+            <div class="col-sm-1 m-2">
+              <img src="https://business-angels.info/images/badge/ecoles/Ecole-ESCP.png" style="width: inherit;">
+            </div>
+
+            <div class="col-sm-1 m-2">
+              <img src="https://business-angels.info/images/badge/ecoles/Ecole-ESCPI.png" style="width: inherit;">
+            </div>
+
+            <div class="col-sm-1 m-2">
+              <img src="https://business-angels.info/images/badge/ecoles/Ecole-ESSEC.png" style="width: inherit;">
+            </div>
+
+            <div class="col-sm-1 m-2">
+              <img src="https://business-angels.info/images/badge/ecoles/Ecole-HEC.png" style="width: inherit;">
+            </div>
+
+            <div class="col-sm-1 m-2">
+              <img src="https://business-angels.info/images/badge/ecoles/Ecole-IMD.png" style="width: inherit;">
+            </div>
+
+            <div class="col-sm-1 m-2">
+              <img src="https://business-angels.info/images/badge/ecoles/Ecole-Intermines.png" style="width: inherit;">
+            </div>
+
+            <div class="col-sm-1 m-2">
+              <img src="https://business-angels.info/images/badge/ecoles/Ecole-ISAE.png" style="width: inherit;">
+            </div>
+
+            <div class="col-sm-1 m-2">
+              <img src="https://business-angels.info/images/badge/ecoles/Ecole-ISEP.png" style="width: inherit;">
+            </div>
+
+            <div class="col-sm-1 m-2">
+              <img src="https://business-angels.info/images/badge/ecoles/Ecole-Neoma.png" style="width: inherit;">
+            </div>
+
+            <div class="col-sm-1 m-2">
+              <img src="https://business-angels.info/images/badge/ecoles/Ecole-Polytechnique.png"
+                style="width: inherit;">
+            </div>
+
+            <div class="col-sm-1 m-2">
+              <img src="https://business-angels.info/images/badge/ecoles/Ecole-Ponts.png" style="width: inherit;">
+            </div>
+
+            <div class="col-sm-1 m-2">
+              <img src="https://business-angels.info/images/badge/ecoles/Ecole-Telecom-ParisTech.png"
+                style="width: inherit;">
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid m-0">
+          <div class="row">
+            <div class="col-sm-12 p-5" style="background-color:darkblue;color:white;text-align: left;">
+              <img class="pb-5" src="https://business-angels.info/images/badge/BADGE-logo-blanc.png"
+                style="width:350px">
+              <p>
+
+                Siège : 12 rue de Poitiers 75007 PARIS<br>
+                Bureaux : 15 Rue du Colonel Driant 75001 PARIS<br><br>
+
+                <span><img class="m-1"
+                    src="https://business-angels.info/images/badge/icones/icone-telephone-petit.png"></span>01 42
+                22 67 35<br>
+                <span><img class="m-1"
+                    src="https://business-angels.info/images/badge/icones/icone-mail-petit.png"></span>secretariat@business-angels.info<br><br>
+
+                <span><img class="m-1"
+                    src="https://business-angels.info/images/badge/icones/icone-linkedin-petit.png"></span>
+                Page Linkedin
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+
+</body>

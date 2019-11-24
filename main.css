@@ -1,0 +1,80 @@
+.body{
+    font-family: Open Sans,Arial, Helvetica, sans-serif;
+    font-size: 0.85em;
+    font-weight: 400;
+    line-height: 1.7em;
+    text-transform: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; 
+}
+
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: rgb(0, 152, 212);
+    
+}
+
+.nav-link {
+    display: block;
+    margin-top: 0; 
+
+}
+
+.nav-item{
+    padding-right: 2rem ;
+    padding-left:2rem;
+}
+
+.navbar-brand{
+    padding-left: 10%;
+}
+#bouton-connexion {
+    position: fixed;
+    right: 0px;
+    top: -5px;
+    padding: 5px;
+    z-index: 2000;
+}
+
+.heading1{
+font-family: Open Sans,Arial, Helvetica, sans-serif;
+font-size: 2em;
+font-weight: 400;
+line-height: 1.2em;
+text-transform: none;
+color: #2a2b6a;
+text-align: center;
+}
+
+.mid{
+    margin-left:0px;
+    margin-right:0px;
+    background-image: url('https://business-angels.info/images/badge/groupe-accueil-fond.jpg');
+
+}
+ .division{
+    padding:2rem;
+    text-align: center;
+    color:white;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.blocks{
+    color:white;
+    background-color:#24a2b6;
+    text-align: center;
+}
+
+.anchor{
+    color:darkcyan;
+    text-decoration-line: underline;
+}
